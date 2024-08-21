@@ -4,7 +4,7 @@ function makeArt() {
     function makeImage() {
         const pic = document.createElement('img'); 
         pic.setAttribute("class", "pictures"); // Create an image element
-        pic.src = '/images/hexagons.svg'; // Set the image source
+        pic.src = 'images/hexagons.svg'; // Set the image source
         images.push(pic); // Add the image to the array
         return pic;
     }
@@ -36,7 +36,7 @@ function makeArt2() {
     function makeImage() {
         const pic = document.createElement('img'); 
         pic.setAttribute("class", "pictures2"); // Create an image element
-        pic.src = '/images/lady.jpeg'; // Set the image source
+        pic.src = 'images/lady.jpeg'; // Set the image source
         images.push(pic); // Add the image to the array
         return pic;
     }
