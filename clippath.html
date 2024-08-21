@@ -19,7 +19,7 @@
     <h2>Using Clip-path</h2>
     <p>Consider the following image. This assumes you are familiar with basic image usage on a website.</p>
 
-    <img src="images/lady.jpeg" 
+    <img src="./images/lady.jpeg" 
     alt="ladypic unformatted" 
     class="ladypic">
 
@@ -32,32 +32,32 @@
     <ol>
         <li>To target a specific image, give it a special class name in the img tag. For our purposes, I will add class="ladypic"
              inside the img tag. </li>
-             <img src="images/imgtag.png" alt="code snippet" class="snippet">
+             <img src="./images/imgtag.png" alt="code snippet" class="snippet">
         <li>Navigate to your CSS file. If you do not have one, create one in the same directory as your HTML file. 
             Inside the CSS file, add the following code snippet. This will target the class "ladypic" so we can apply the clip-path
             to the image once we create it. I've </li>
-            <img src="images/ladypicclass.png" alt="code snippet"  class="snippet">
+            <img src="./images/ladypicclass.png" alt="code snippet"  class="snippet">
         <li>Now we will add the clip-path to the class. This will be a circle, so we will use the circle function. According to 
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/circle">mdn web_docs</a>, a CSS circle is defined
             using a radius and position, which makes sense. We will use the circle function to define the radius and position of our clip path.
             the first parameter is the radius. Here, is is set to 50% of the element. The second parameter is the position. Here, it is set to
             50% 50%. These values represent (X,Y) coordinates, respectivley. The X value is 50% from the left, and the Y value is 50% from the top.
             This gives you complete freedom to place the clip path exactly where you want it. Fantastic!</li>
-            <img src="images/clipcircle.png" alt="code snippet"  class="snippet">
+            <img src="./images/clipcircle.png" alt="code snippet"  class="snippet">
             <br>
             <p>* I am creating a second ladypic2 class for the purposes of this tutorial, but you will only need one for your page. Just make sure
                 you are targeting the right image, and you will have no problems.
             </p>
         <li>Lets check it out:</li>
-        <img src="images/lady.jpeg" alt="cropped pic" class="ladypic2" >
+        <img src="./images/lady.jpeg" alt="cropped pic" class="ladypic2" >
             <p>So, this is nice! But thats not targeting the head. How would we do that? Well, lets try a smaller radius and decrease the "Y"
                 position to move the circle up.</p>
             </p>
-            <img src="images/ladypic3snippet.png" alt="code snippet" class="snippet">
+            <img src="./images/ladypic3snippet.png" alt="code snippet" class="snippet">
         </li>
         <li>
             <p>After modifiying the CSS, this is looking more like what we wanted!</p>
-            <img src="images/lady.jpeg" alt="code snippet" class="ladypic3">
+            <img src="./images/lady.jpeg" alt="code snippet" class="ladypic3">
         </li>
     </ol>
    <p>The circle is great for an example, but there is many other simple shapes you can have. It's a little difficult to determine what values 
@@ -68,8 +68,8 @@
     This is also good for learning how to create shapes with points. You can manipulate the points and see how it changes the shape.
    </p> 
 <p>One of my favorites is the star.</p>
-<img src="images/starclip.png" alt="star" >
-<img src="images/lady.jpeg" alt="star" class="ladypicstar">
+<img src="./images/starclip.png" alt="star" >
+<img src="./images/lady.jpeg" alt="star" class="ladypicstar">
 <p>Pretty cool!</p>
 </section>
 
