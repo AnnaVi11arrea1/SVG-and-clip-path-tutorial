@@ -66,6 +66,7 @@ td{
     clip-path: circle(25% at 50% 30%);
     display: block;
     margin: 0 auto; 
+    margin-bottom: -80px;
 }
 
 .ladypicstar{
@@ -74,6 +75,7 @@ td{
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     display: block;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .nav{
@@ -241,4 +243,11 @@ footer{
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+.list {
+    background-color: #d7d7ff;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-right: 20px;
 }
