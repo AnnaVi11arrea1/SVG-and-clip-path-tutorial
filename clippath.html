@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Graphics</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="tophome">
+        <h1 class="title">Web Graphics Tutorial</h1>
+        <p class="subtitle">Pick a topic</p>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="svg.html">SVG</a>
+            <a href="clippath.html">Clip-Path</a>
+            <a href="arrays.html">Arrays</a>
+        </div>
+    </div>
+<section>
+    <h2>Using Clip-path</h2>
+    <p>Consider the following image. This assumes you are familiar with basic image usage on a website.</p>
+
+    <img src="/images/lady.jpeg" 
+    alt="ladypic unformatted" 
+    class="ladypic">
+
+    <p>Here is the image without a clip-path. It is a simple image of a lady. Lets say, that you only want her head visible,
+        like for a profile picture. This is why we need our friend, the clip-path! clip-path is defined in your CSS on 
+        the class of an element. I like to create a separate CSS stylesheet, so that is the method I will be using. However, 
+        you may choose to use the style tag in the head of your HTML if you like. For me personally, I like to kep things 
+        seperate for organization in case things start getting complex. Up to you!</p>
+    <h2>Steps</h2>
+    <ol>
+        <li>To target a specific image, give it a special class name in the img tag. For our purposes, I will add class="ladypic"
+             inside the img tag. </li>
+             <img src="/images/imgtag.png" alt="code snippet" class="snippet">
+        <li>Navigate to your CSS file. If you do not have one, create one in the same directory as your HTML file. 
+            Inside the CSS file, add the following code snippet. This will target the class "ladypic" so we can apply the clip-path
+            to the image once we create it. I've </li>
+            <img src="/images/ladypicclass.png" alt="code snippet"  class="snippet">
+        <li>Now we will add the clip-path to the class. This will be a circle, so we will use the circle function. According to 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape/circle">mdn web_docs</a>, a CSS circle is defined
+            using a radius and position, which makes sense. We will use the circle function to define the radius and position of our clip path.
+            the first parameter is the radius. Here, is is set to 50% of the element. The second parameter is the position. Here, it is set to
+            50% 50%. These values represent (X,Y) coordinates, respectivley. The X value is 50% from the left, and the Y value is 50% from the top.
+            This gives you complete freedom to place the clip path exactly where you want it. Fantastic!</li>
+            <img src="/images/clipcircle.png" alt="code snippet"  class="snippet">
+            <br>
+            <p>* I am creating a second ladypic2 class for the purposes of this tutorial, but you will only need one for your page. Just make sure
+                you are targeting the right image, and you will have no problems.
+            </p>
+        <li>Lets check it out:</li>
+        <img src="/images/lady.jpeg" alt="cropped pic" class="ladypic2" >
+            <p>So, this is nice! But thats not targeting the head. How would we do that? Well, lets try a smaller radius and decrease the "Y"
+                position to move the circle up.</p>
+            </p>
+            <img src="/images/ladypic3snippet.png" alt="code snippet" class="snippet">
+        </li>
+        <li>
+            <p>After modifiying the CSS, this is looking more like what we wanted!</p>
+            <img src="/images/lady.jpeg" alt="code snippet" class="ladypic3">
+        </li>
+    </ol>
+   <p>The circle is great for an example, but there is many other simple shapes you can have. It's a little difficult to determine what values 
+    to use for create a shape with points. Fortunatley ther is a ton of tools you can use for speed and accuracy. One such tool is:
+    </p> 
+    <p><a href="https://bennettfeely.com/clippy/">CSS clip-path maker</a></p>
+    <p>You can use this tool to create a shape and it will give you the CSS code. 
+    This is also good for learning how to create shapes with points. You can manipulate the points and see how it changes the shape.
+   </p> 
+<p>One of my favorites is the star.</p>
+<img src="/images/starclip.png" alt="star" >
+<img src="/images/lady.jpeg" alt="star" class="ladypicstar">
+<p>Pretty cool!</p>
+</section>
+
+<p><a href="#">Go to Top</a></p>
+
+<footer>
+    <div>Web Graphics Tutorial</div>
+    <div>Created by: <a href="https://github.com/AnnaVi11arrea1">Anna Villarreal</a></div>
+    <code>Copyright 2024 Anna Villarreal</code>
+</footer>
+</body>
+</html>

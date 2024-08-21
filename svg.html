@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Graphics</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="tophome">
+        <h1 class="title">Web Graphics Tutorial</h1>
+        <p class="subtitle">Pick a topic</p>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="svg.html">SVG</a>
+            <a href="clippath.html">Clip-Path</a>
+            <a href="arrays.html">Arrays</a>
+        </div>
+    </div>
+    <section>
+        <h2>Using SVG files</h2>
+        
+        <p>First you will need an svg file. This will be a file that you add to your directory. Here is one that I created:
+            <img src="/images/hexagons.svg" alt="hexagons" class="hexagons">
+        </p>
+        <div>* If you just want a vector for your own testing purposes, chatGPT may be able to create you something.</div>
+        <p>Now that you have your svg file, you can add it to your HTML file just like you would an image, and assign it a class
+            to apply specific CSS properties.
+            <br>
+            <br>
+            Lets say you want to cut this object shape out of the background, to create a sort of outline or silouette.
+            <br>
+            <br>
+            I have created a div element with a class="bgone" property in CSS. To use the svg file on this element, 
+            make sure the element it is being applied to has a height, width, and background color property so you
+            see the changes. Here is what that might look like: </p>
+        
+            <div class="teaser">
+                <img src="/images/hexagonclass.png" alt="svg" class="snippet">
+                <div class="bgone">
+                </div>
+            </div>
+       
+        <p>So, what is happening here?</p>
+        <ol>
+            <li>
+                The svg file is being applied to the background of the div element with the class "bgone".
+                The svg area is the part of the background that is allowed to show through. So we are actually only 
+                seeing a small area of the background, relatively speaking.
+            </li>
+            <li>
+                It creates a sort of stencil effect. 
+            </li>
+            <li>
+                Now you have the power to make your svg file any color you like by tweaking the background! Be sure to
+                play with the properties.
+            </li>
+        </ol>
+
+        <h2>Here is a little teaser:</h2>
+        <div class="teaser">
+            <div class="bgtwo">
+            </div>
+        </div>
+        <div>
+            <img src="/images/animatebgtwo.png" alt="code snippet" class="snippetbgtwo">
+        </div>
+        <p>So, without having extensive animation knowledge, you can do some pretty cool stuff. A nice website for
+            finding some animations is:
+            <a href="https://animania.info/css/center-revolve">Animania</a>
+            <br>
+            <br>
+            If you really wanna have some fun, try layering the clip paths and divs inside eachother, you can stack them to
+            make wild patterns. The application here is just for fun, and becuase we can! Don't forget the CSS :before and :after
+            methods for some extra spice. 
+        </p>
+        
+        
+
+    </section>
+
+
+    <p><a href="#">Go to Top</a></p>
+    <footer>
+        <div>Web Graphics Tutorial</div>
+        <div>Created by: <a href="https://github.com/AnnaVi11arrea1">Anna Villarreal</a></div>
+        <code>Copyright 2024 Anna Villarreal</code>
+    </footer>
+</body>
+</html>

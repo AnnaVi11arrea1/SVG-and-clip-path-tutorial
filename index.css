@@ -1,0 +1,244 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #d5c5da;
+    width: 90%;
+    font-weight: 500;
+
+}
+.table, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    background-image: radial-gradient(#1a0257, transparent, transparent);
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+    background-color: #5745ad;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: purple;
+    font-weight: 600;
+}
+
+th{
+    background-color: #d7d7ff;
+    border-top: 2px solid black;
+    padding: 10px;
+}
+
+td{
+    background-color: #f5f5ff;
+    padding: 10px;
+}
+
+.ladypic{
+    width: 50%; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.ladypic2{
+    width: 50%; 
+    height: auto;
+    clip-path: circle(50% at 50% 50%);
+    display: block;
+    margin: 0 auto; 
+}
+
+.ladypic3{
+    width: 50%; 
+    height: auto;
+    clip-path: circle(25% at 50% 30%);
+    display: block;
+    margin: 0 auto; 
+}
+
+.ladypicstar{
+    width: 50%; 
+    height: auto;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: block;
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(transparent, #d7d7ff, transparent);
+    width: 100%;
+
+}
+
+.nav a{
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+    margin: 15px;
+    border: 1px solid purple;
+    padding: 10px;
+
+}
+
+a:hover{
+    box-shadow: 0 0 10px purple;
+}
+
+p, li{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+p{
+    background-image: linear-gradient(white, rgba(255, 255, 255, 0.5));
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hexagons{
+    display: flex;
+    padding: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.bgone{
+    background-color: black;
+    height:300px;
+    width: 300px;
+    mask-image: url(images/hexagons.svg);
+    margin-top: 20px;
+}
+
+.bgtwo{
+    background-image: linear-gradient(90deg, pink 0%, purple 25%, blue 50%, lime 75%, yellow 100%);
+    height:300px;
+    width: 300px;
+    mask-image: url(images/hexagons.svg);
+    margin-top: 20px;
+    animation-name: different-color, center-revolve;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.5,1,1,1);
+    margin: 70px;
+}
+			
+@keyframes different-color {
+	0% { filter: hue-rotate(0); }
+    50% { filter: hue-rotate(180deg); }		
+	100% {  filter: hue-rotate(360deg); }
+}
+			
+@keyframes center-revolve {
+	50% { transform: rotate(360deg); }
+}
+
+.teaser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.snippetbgtwo{
+    display: flex;
+    width: 90%;
+}
+
+.snippet{
+    width: 50%;
+    height: 50%;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.tophome{
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/mountain.jpeg");
+    background-size: cover;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.pictures{
+    height: 25vw;
+    width: 25vw;
+    animation: center-revolve 5s infinite;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.pictures2{
+    height: 25vw;
+    width: 25vw;
+    animation: center-revolve 5s infinite;
+    border-radius: 50%;
+    border: 1px solid black;
+    clip-path: circle(50% at 50% 50%);
+}
+
+#container, #container2{
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    animation: different-color 5s infinite;
+    border-radius: 4px;
+    border:10px solid transparent;
+    background-image: linear-gradient(45deg, black 0%, purple 25%, gray, lime 75%, yellow 80%, black 100%);
+    background-repeat: repeat;
+    background-size: 25%;
+}
+
+#container2{
+    display: flex;
+    animation: different-color 5s infinite;
+    border-radius: 10px;
+    border:20px solid transparent;
+    border-image: linear-gradient(45deg, pink 0%, purple 25%, blue 50%, lime 75%, yellow 100%) 30% round;
+    background-color: purple;
+}
+
+ .image{
+    display: flex;
+    justify-content: space-around;
+    background-color: #d7d7ff;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+footer{
+    background-color: #5745ad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
