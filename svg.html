@@ -17,21 +17,23 @@
     </div>
     <section>
         <h2 class="teaser">Using SVG files</h2>
+        <p>First you will need an svg file. This will be a file that you add to your directory, probably in with your images. Here is one that I created:</p>
+            <div>
+                <img src="./images/hexagons.svg" alt="hexagons" class="hexagons">
+                <figcaption>"hexagons.svg"</figcaption>
+            </div>
         
-        <p>First you will need an svg file. This will be a file that you add to your directory. Here is one that I created:
-            <img src="./images/hexagons.svg" alt="hexagons" class="hexagons">
-        </p>
-        <div>* If you just want a vector for your own testing purposes, chatGPT may be able to create you something.</div>
+        <sup>* If you just want a vector for your own testing purposes, chatGPT may be able to create you something.</sup>
         <p>Now that you have your svg file, you can add it to your HTML file just like you would an image, and assign it a class
             to apply specific CSS properties.
             <br>
             <br>
-            Lets say you want to cut this object shape out of the background, to create a sort of outline or silouette.
+            Lets say you want to cut the shape of this object out of the background, to create a sort of outline or silouette.
             <br>
             <br>
-            I have created a div element with a class="bgone" property in CSS. To use the svg file on this element, 
+            I have created a div element with a class="bgone" in CSS. To use the svg file on this element, 
             make sure the element it is being applied to has a height, width, and background color property so you
-            see the changes. Here is what that might look like: </p>
+            see the changes. Use the CSS property on an svg called mask-image. Here is what that might look like: </p>
         
             <div class="teaser">
                 <img src="./images/hexagonclass.png" alt="svg" class="snippet">
@@ -42,12 +44,12 @@
         <p>So, what is happening here?</p>
         <ol>
             <li>
-                The svg file is being applied to the background of the div element with the class "bgone".
+                The svg file is being applied to the background of the div element.
                 The svg area is the part of the background that is allowed to show through. So we are actually only 
                 seeing a small area of the background, relatively speaking.
             </li>
             <li>
-                It creates a sort of stencil effect. 
+                The creates a sort of mask or stencil effect. 
             </li>
             <li>
                 Now you have the power to make your svg file any color you like by tweaking the background! Be sure to
