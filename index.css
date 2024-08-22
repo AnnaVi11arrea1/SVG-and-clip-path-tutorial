@@ -253,3 +253,85 @@ footer{
     border-radius: 10px;
     padding-right: 20px;
 }
+
+//custom diolog boxes
+
+#dialogoverlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0.8;
+    background-color: #FFF;
+}
+
+#dialogbox{
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    color: black;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#dialogbox > div{ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("images/lady.jpeg");
+    background-size: cover;
+    border-radius: 50px;
+    border: 5px solid black;
+    box-shadow: 0 0 10px black;
+}
+
+#dialogbox > div > #dialogboxhead{ 
+    background-image: linear-gradient(#ff00ff, blue, purple); 
+    font-size: 12px;
+    padding: 10px 40px;
+    color: #CCC;
+    border-bottom: 1px solid orange;
+    border-radius: 50px;
+    border-top: 1px solid lime;
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    }
+#dialogbox > div > #dialogboxbody{ 
+    background-color:#ffb0ff;
+     padding: 20px; 
+     color: black;
+     border-radius: 50px;
+     border: 2px solid black;
+     margin: 10px 20px;
+    }
+#dialogbox > div > #dialogboxfoot{ 
+     padding: 2px; 
+     text-align: right;
+     border-radius: 50px;
+     border: 2px solid black;
+     background-image: linear-gradient(white, transparent, purple);
+    }
+
+button{
+    border: none;
+    background-image: linear-gradient(#ffb0ff, #ff00ff, purple);
+    border-radius: 50px;
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+button:hover{
+    border: none;
+    background-image: linear-gradient(#ffb0ff, #ff00ff, purple);
+    border-radius: 50px;
+    margin: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 0 20px purple;
+}

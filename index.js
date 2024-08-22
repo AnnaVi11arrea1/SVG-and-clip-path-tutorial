@@ -56,57 +56,54 @@ function makeArt2() {
             size[k].style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
             };
 
-                    // Add an on hover effect to a specific item
-        const specificItem = images[0]; // Replace 0 with the index of the specific item you want to add the effect to
-        specificItem.addEventListener('mouseover', function() {
-            specificItem.src = 'images/cube.jpeg' // Create a new image           
-        });
-        specificItem.addEventListener('click', function() {
-            let meditation = prompt("You meditate on an ancient cube", "Earth will be at peace one day");
-            if (meditation == null || meditation == "") {
-                alert("You hear a voice from the heavens: 'Godspeed'"); // Revert the image source
-              } else { 
-                alert("Godspeed");
-              }
-        });
-        specificItem.addEventListener('mouseout', function() {
-            specificItem.src = 'images/lady.jpeg'; // Revert the image source when the mouse is no longer over the item
-        });
+            addHoverAndClickEffect(images[0], 'images/cube.jpeg', 'You meditate on an ancient cube', 'Earth will be at peace one day', 'You hear a voice from the heavens: \'Godspeed\'', 'Godspeed');
+            addHoverAndClickEffect(images[1], 'images/book.jpeg', 'You receive a message from a higher power', 'Walk with purpose every day', 'The wind howls like a distant voice: \'Do not search for the path, walk it\'', 'Listen to the wind');
+            addHoverAndClickEffect(images[2], 'images/wizard.jpeg', 'You inherit eternal strength', 'The souls of past wisdoms acknowledge you', 'An overwhelming feeling of nostalgia consumes you: \'We have been here before\'', 'Ancestral spirits guide you');
+    }
+            function addHoverAndClickEffect(item, hoverSrc, promptMessage, promptDefault, alertMessage, alertDefault) {
+                item.addEventListener('mouseover', function() {
+                    item.src = hoverSrc; // Change the image source on hover
+                });
+                item.addEventListener('click', function() {
+                    let meditation = prompt(promptMessage, promptDefault);
+                    if (meditation == null || meditation == "") {
+                        alert(alertMessage); // Show alert if prompt is empty or cancelled
+                    } else { 
+                        alert(alertDefault);
+                    }
+                });
+                item.addEventListener('mouseout', function() {
+                    item.src = 'images/lady.jpeg'; // Revert the image source when the mouse is no longer over the item
+                });
+            
 
-        const specificItem2 = images[1]; // Replace 0 with the index of the specific item you want to add the effect to
-        specificItem2.addEventListener('mouseover', function() {
-            specificItem2.src = 'images/book.jpeg' // Create a new image           
-        });
-        specificItem2.addEventListener('click', function() {
-            let meditation = prompt("You recieve a message from a higher power", "Walk with purpose every day");
-            if (meditation == null || meditation == "") {
-                alert("The wind howls like a distant voice: 'Do not search for the path, walk it'"); // Revert the image source
-              } else { 
-                alert("Listen to the wind");
-              }
-             // Revert the image source when the mouse is no longer over the item
-        });
-        specificItem2.addEventListener('mouseout', function() {
-            specificItem2.src = 'images/lady.jpeg'; // Revert the image source when the mouse is no longer over the item
-        });
-        const specificItem3 = images[2]; // Replace 0 with the index of the specific item you want to add the effect to
-        specificItem3.addEventListener('mouseover', function() {
-            specificItem3.src = 'images/wizard.jpeg' // Create a new image           
-        });
-        specificItem3.addEventListener('click', function() {
-            let meditation = prompt("You inherit eternal strength", "The souls of past wisdoms acknowlegde you");
-            if (meditation == null || meditation == "") {
-                alert("An overwhelming feeling of nostolgia consumes you: 'We have been here before'"); // Revert the image source
-              } else { 
-                alert("Ancestral spirits guide you");
-              } // Revert the image source when the mouse is no longer over the item
-        });
-        specificItem3.addEventListener('mouseout', function() {
-            specificItem3.src = 'images/lady.jpeg'; // Revert the image source when the mouse is no longer over the item
-        });
-       
+        
     }
     addImage(); // Add an image to the body
 }
 
 makeArt2(); // Call the function
+
+function customAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550/2)+"px";
+        dialogbox.style.top = "30%";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "A message from before time";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="alert.ok()">I accept my fate</button><button onclick="alert.ok()">I challenge the universe</button>';
+        
+    }
+    this.ok = function(){
+        document.getElementById('dialogbox').style.display = "none";
+        document.getElementById('dialogoverlay').style.display = "none";
+    }
+}
+var alert = new customAlert();
+alert.render()
